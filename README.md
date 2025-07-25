@@ -16,4 +16,4 @@ Answer a set number of questions within a time limit. Your score and progress ar
 ## 🏁 Getting Started
 1. **Clone** the repo  
    ```bash
-   git clone https://github.com/YourUsername/quiz-i-cool.git
+   git clone https://github.com/AnDayno/Quiz_Master_Unity2D.git
