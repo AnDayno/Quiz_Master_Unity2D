@@ -122,6 +122,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &115837456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6660784416453546769, guid: 7e7d986c043f6134bbbe0604124dd0f5, type: 3}
+  m_PrefabInstance: {fileID: 2037195071}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &212478022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6660784416453546769, guid: 7e7d986c043f6134bbbe0604124dd0f5, type: 3}
+  m_PrefabInstance: {fileID: 6660784416257866583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &212478023 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6660784416453546768, guid: 7e7d986c043f6134bbbe0604124dd0f5, type: 3}
@@ -338,6 +348,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330724124}
   m_CullTransparentMesh: 1
+--- !u!1 &401065382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6660784416453546769, guid: 7e7d986c043f6134bbbe0604124dd0f5, type: 3}
+  m_PrefabInstance: {fileID: 912795416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &421450378
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +606,11 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &761856424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6660784416453546769, guid: 7e7d986c043f6134bbbe0604124dd0f5, type: 3}
+  m_PrefabInstance: {fileID: 1853357236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &862402725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,6 +1107,7 @@ GameObject:
   - component: {fileID: 1427671379}
   - component: {fileID: 1427671378}
   - component: {fileID: 1427671377}
+  - component: {fileID: 1427671381}
   m_Layer: 5
   m_Name: QuizCanvas
   m_TagString: Untagged
@@ -1178,6 +1199,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1427671381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427671376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc784f4628aa0164f8fae3ebc48792ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  question: {fileID: 11400000, guid: 6016c99bcd2d308479c8ee73f69dce75, type: 2}
+  questionText: {fileID: 234879248}
+  answerButtons:
+  - {fileID: 212478022}
+  - {fileID: 115837456}
+  - {fileID: 761856424}
+  - {fileID: 401065382}
 --- !u!1001 &1853357236
 PrefabInstance:
   m_ObjectHideFlags: 0
