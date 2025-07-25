@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: Which dance originated in Argentina and is known for its passionate and
     dramatic movements?
+  answers:
+  - Salsa
+  - Tango
+  - Samba
+  - Merengue
+  correctAnswerIndex: 1

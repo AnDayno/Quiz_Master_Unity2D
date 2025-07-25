@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 5
   m_EditorClassIdentifier: 
   question: Which dance style involves rhythmically tapping the feet to create sound?
+  answers:
+  - Ballet
+  - Jazz
+  - Tap Dance
+  - Hip-Hop
+  correctAnswerIndex: 2

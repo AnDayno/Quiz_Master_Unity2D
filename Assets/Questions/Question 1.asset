@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 1
   m_EditorClassIdentifier: 
   question: Where did breakdancing originate?
+  answers:
+  - Tokyo, Japan
+  - Rio de Janeiro, Brazil
+  - New York City, USA
+  - Paris, France
+  correctAnswerIndex: 2
