@@ -6,19 +6,47 @@ using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
+    [Header("Questions")]
     [SerializeField] QuestionSO question;
     [SerializeField] TextMeshProUGUI questionText;
+
+    [Header("Answers")]
     [SerializeField] GameObject[] answerButtons;
+    int correctAnswerIndex;
+    bool hasAnsweredEarly;
+
+    [Header("Button Colors")]
     [SerializeField] Sprite defaultAnswerSprite;
     [SerializeField] Sprite correctAnswerSprite;
+
+    [Header("Timer")]
+    [SerializeField] Image timerImage;
+    Timer timer;
+
     Image buttonImage;
-
-    int correctAnswerIndex;
-
 
     void Start()
     {
+        timer = FindAnyObjectByType<Timer>();
+
         DisplayQuestion();
+    }
+
+    void Update()
+    {
+        timerImage.fillAmount = timer.fillFraction;
+
+        if(timer.loadNextQuestion)
+        {
+            hasAnsweredEarly = false;
+            GetNextQuestion();
+            timer.loadNextQuestion = false;
+        }
+        else if (!hasAnsweredEarly && !timer.isAnsweringQuestion)
+        {
+            FailedToAnswerCorrectly();
+            SetButtonState(false);
+        }
     }
 
     private void DisplayQuestion()
@@ -50,12 +78,19 @@ public class Quiz : MonoBehaviour
         }
         else
         {
-            correctAnswerIndex = question.GetCorrectAnswerIndex();
-            questionText.text = "Sorry the correct answer was:\n" + question.GetAnswer(correctAnswerIndex);
-            buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
-            buttonImage.sprite = correctAnswerSprite;
+            FailedToAnswerCorrectly();
         }
+        hasAnsweredEarly = true;
         SetButtonState(false);
+        timer.CancelTimer();
+    }
+
+    private void FailedToAnswerCorrectly()
+    {
+        correctAnswerIndex = question.GetCorrectAnswerIndex();
+        questionText.text = "Sorry the correct answer was:\n" + question.GetAnswer(correctAnswerIndex);
+        buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
+        buttonImage.sprite = correctAnswerSprite;
     }
 
     void SetButtonState(bool state)

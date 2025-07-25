@@ -1082,7 +1082,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToCompleteQuestion: 30
   timeToShowCorrectAnswer: 10
+  loadNextQuestion: 0
   isAnsweringQuestion: 0
+  fillFraction: 0
 --- !u!4 &1173938662
 Transform:
   m_ObjectHideFlags: 0
@@ -1300,6 +1302,7 @@ MonoBehaviour:
   - {fileID: 401065382}
   defaultAnswerSprite: {fileID: 21300000, guid: c6a10c3c61ab07a42ae03abebce31e26, type: 3}
   correctAnswerSprite: {fileID: 21300000, guid: 36b8b510c919ccb4e8671882eaf15853, type: 3}
+  timerImage: {fileID: 2018285490}
 --- !u!1001 &1853357236
 PrefabInstance:
   m_ObjectHideFlags: 0
