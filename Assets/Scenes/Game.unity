@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToCompleteQuestion: 30
-  timeToShowCorrectAnswer: 10
+  timeToShowCorrectAnswer: 5
   loadNextQuestion: 0
   isAnsweringQuestion: 0
   fillFraction: 0
@@ -1293,8 +1293,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc784f4628aa0164f8fae3ebc48792ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: {fileID: 11400000, guid: 6016c99bcd2d308479c8ee73f69dce75, type: 2}
   questionText: {fileID: 234879248}
+  questions:
+  - {fileID: 11400000, guid: 6016c99bcd2d308479c8ee73f69dce75, type: 2}
+  - {fileID: 11400000, guid: 7289dcf50421cee42b344e81995a6b7b, type: 2}
+  - {fileID: 11400000, guid: 891efc21c3decb14e9492a66982d29a9, type: 2}
+  - {fileID: 11400000, guid: 1fb3fe9849eafb146bff628073442b0a, type: 2}
+  - {fileID: 11400000, guid: c777a053c7e47614b8dc17ffac623737, type: 2}
   answerButtons:
   - {fileID: 212478022}
   - {fileID: 115837456}
